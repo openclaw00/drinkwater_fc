@@ -524,21 +524,21 @@ p { margin-top: 0; }
 /* Schedule */
 .schedule-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(3, 1fr); /* Changed from 4 to 3 columns */
+  gap: 24px;
 }
 
 .schedule-card {
-  padding: 22px;
+  padding: 30px;
   border-radius: var(--radius-md);
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px; /* Increased gap */
 }
 
 .schedule-day {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   color: var(--muted);
@@ -546,12 +546,12 @@ p { margin-top: 0; }
 
 .schedule-card strong {
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 1.4rem; /* Increased font size */
   color: var(--text);
 }
 
 .schedule-time {
-  font-size: 0.85rem;
+  font-size: 1rem; /* Increased font size */
   color: var(--muted);
 }
 

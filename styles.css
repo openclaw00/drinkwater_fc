@@ -648,3 +648,50 @@ p { margin-top: 0; }
 .contact-locations strong {
   color: var(--text);
 }
+
+.location-boxes {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.location-box {
+  padding: 16px 24px;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  color: var(--muted);
+  flex-grow: 1;
+  max-width: 300px; /* Limit width for larger screens */
+}
+
+.location-box strong {
+  color: var(--text);
+  margin-right: 6px;
+}
+
+.boys-location {
+  background: rgba(66, 133, 244, 0.05);
+  border-color: rgba(66, 133, 244, 0.15);
+}
+
+.girls-location {
+  background: rgba(255, 130, 180, 0.08);
+  border-color: rgba(255, 130, 180, 0.2);
+  color: #ff90c0;
+}
+
+.girls-location strong {
+  color: #ffc4e0;
+}
+
+@media (max-width: 640px) {
+  .location-boxes {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .location-box {
+    max-width: none;
+  }
+}

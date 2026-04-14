@@ -443,7 +443,7 @@ p { margin-top: 0; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
-  align-items: start;
+  align-items: stretch; /* Ensures equal height */
 }
 
 .membership-card {
@@ -498,11 +498,27 @@ p { margin-top: 0; }
 .membership-info {
   padding: 36px;
   border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column; /* Allows content to push down */
 }
 
 .membership-info h3 {
   font-size: 1.8rem;
-  margin-bottom: 24px;
+  margin-bottom: 32px; /* Increased margin for more space */
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 28px; /* Increased gap between steps */
+  flex-grow: 1; /* Allows steps to grow and fill space */
+  justify-content: center; /* Vertically center content */
+}
+
+.step {
+  display: flex;
+  gap: 18px; /* Increased gap between number and text */
+  align-items: flex-start;
 }
 
 .step-num {
@@ -512,17 +528,18 @@ p { margin-top: 0; }
   margin-top: 4px;
   flex-shrink: 0;
   width: 32px;
+  line-height: 1.3; /* Adjust line height for better alignment */
 }
 
 .step strong {
   display: block;
   margin-bottom: 6px;
-  font-size: 1.1rem;
+  font-size: 1.2rem; /* Slightly larger text */
 }
 
 .step p {
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 0.95rem; /* Slightly larger text */
   margin: 0;
 }
 /* Schedule */
